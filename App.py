@@ -1,7 +1,7 @@
 import streamlit as st
 from transformers import pipeline
 # loard the summerization model
-st.cache_resource
+@st.cache_resource
 def load_summarizer():
   return pipeline("summarization", model="sshleifer/distilbart-cnn-12-6")
 #calling the function
