@@ -5,12 +5,12 @@ from transformers import pipeline
 def load_summarizer():
   return pipeline("summarization", model="sshleifer/distilbart-cnn-12-6")
 #calling the function
-summerizer = load_summerizer()
+summarizer = load_summarizer()
 #streamlit UI
-st.title(" AI Text Summerizer")
+st.title(" AI Text Summarizer")
 st.write("Enter a long text below, and get a concise summary")
 #text input
-long_text=st.text_area("Enter text to summerize:",height=200)
+long_text=st.text_area("Enter text to summarize:",height=200)
 #summary parameters 
 max_length=st.slider("Max Summary Length", min_value=50,max_value=300,value=130)
 min_length=st.slider("Min Summary Length", min_value=20,max_value=100,value=30)
