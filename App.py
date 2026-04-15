@@ -5,7 +5,7 @@ st.cache_resource
 def load_summarizer():
   return pipeline("summarization", model="sshleifer/distilbart-cnn-12-6")
 #calling the function
-summerizer = load_summerzier()
+summerizer = load_summerizer()
 #streamlit UI
 st.title(" AI Text Summerizer")
 st.write("Enter a long text below, and get a concise summary")
